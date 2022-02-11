@@ -1,0 +1,2 @@
+Max. integer is 2147483647
+Min. integer is -2147483648
