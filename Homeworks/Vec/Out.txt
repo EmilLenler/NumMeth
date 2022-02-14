@@ -1,0 +1,20 @@
+u= [1 2 3]
+v= [4 5 6]
+u+v= [5 7 9]
+u-v= [-3 -3 -3]
+2*u= [2 4 6]
+-u= [-1 -2 -3]
+Vector product of u and v is [4 10 18]
+Dot product of u and v is 32
+Norm of v is 8.77496438739212
+ToString for v: 3D Euclidian vector x=4 y=5 z=6
+Absolute Vector Approximate:
+Is u ~ v?: False
+is v ~ u?: False
+Is u ~ u?: True
+Define udelta as u + 1e-11*[1 1 1] and check if approximately same
+True
+Relative Vector approximate: 
+is u ~ v?: False
+is v ~ u?: False
+is u ~ udelta?: True
