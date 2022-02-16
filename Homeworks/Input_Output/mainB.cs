@@ -3,6 +3,7 @@ using System;
 using static System.Math;
 class cmdline{
 	public static void Main(string[] args){
+	WriteLine("This is output B");
 	foreach(var arg in args){
 		double x = double.Parse(arg);
 		WriteLine($" x = {x} , sin(x) = {Sin(x)} , cos(x) = {Cos(x)} ");

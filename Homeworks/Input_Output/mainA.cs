@@ -3,6 +3,7 @@ using System;
 using static System.Math;
 class stringinput{
 	static public void Main(){
+		WriteLine("This is output A");
 		char[] delimiters= {' ','\t','\n'};
 		var options = StringSplitOptions.RemoveEmptyEntries;
 		for( string line =ReadLine(); line != null; line = ReadLine() ){
