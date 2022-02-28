@@ -1,0 +1,9 @@
+set terminal png 
+set output 'erf.pyxplot.png' 
+set xlabel 'x' 
+set key top left 
+set title 'Error Function'
+set ylabel 'erf(x)' 
+plot 'erf.txt' using 1:2 with lines title 'Error Function' ,\ 
+'erf.table.txt' with pointtyp 3 title 'table' 
+

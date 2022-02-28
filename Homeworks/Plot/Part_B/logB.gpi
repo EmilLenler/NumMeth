@@ -1,0 +1,8 @@
+set terminal png 
+set output 'gamma.pyxplot.png' 
+set xlabel 'x' 
+set ylabel 'gamma(x)' 
+set title 'Gamma Function' 
+plot 'gamma.txt' using 1:2 with lines title 'Gamma Fct' ,\ 
+'tablevals.txt' with pointtype 3 title 'tablevals' 
+
