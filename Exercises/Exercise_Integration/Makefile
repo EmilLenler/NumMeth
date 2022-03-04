@@ -13,4 +13,4 @@ matlib.dll : integrate.cs
 clean : 
 	rm matlib.dll main.exe Out.txt
 
-#This is a git workaround
+#This is a git workaro

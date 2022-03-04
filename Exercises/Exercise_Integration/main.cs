@@ -1,7 +1,7 @@
 using static System.Math;
 using static System.Console;
 using System;
-//This comment is a git workaround
+//This comment is a git workar
 class main{
     public static void Main(){
         WriteLine("Integral of ln(x)/sqrt(x) from 0 to 1 is");

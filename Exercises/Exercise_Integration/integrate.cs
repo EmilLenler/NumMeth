@@ -21,7 +21,7 @@ if(IsNegativeInfinity(a) && IsPositiveInfinity(b))
 return o8a(t=>f(a+(b-a)*(3*t*t-2*t*t*t))*(b-a)*6*(t-t*t) ,0,1,acc,eps);
 //return o8a(t=>f((a+b)/2+(b-a)/2*Cos(t))*Sin(t)*(b-a)/2,0,PI,acc,eps);
 }//o8av
-//This is a git workaround
+//This is 
 public static double o8a
 (Func<double,double> f,double a,double b,
 double acc=1e-6,double eps=1e-6,
