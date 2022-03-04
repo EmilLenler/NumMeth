@@ -8,5 +8,5 @@ class main{
         Func<double,double> f = delegate(double x){return Log(x)/Sqrt(x);};
         double Result = integrate.quad(f,a:0,b:1,acc:1e-6,eps:1e-6);
         WriteLine($"{Result}");
+        }
     }
-}
