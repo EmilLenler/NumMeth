@@ -3,9 +3,11 @@ set output 'gammacomp.pyxplot.png'
 set xlabel 'Re(z)' 
 set ylabel 'Im(z)' 
 set zlabel 'Abs(Gamma(z))' 
+set zrange [0:10] 
+set xrange[-4:4] 
 set key below 
 set size 8 square 
 set grid 
 set view -30,30 
-plot 3d 'gammacomp.txt' using 1:2:3 with surface col black fillcol blue 
+plot 3d 'gammacomp.txt' using 1:2:3 with surface col black fillcol blue notitle 
 
