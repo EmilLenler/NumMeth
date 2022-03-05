@@ -1,6 +1,6 @@
 set terminal png 
 set output 'erf_int_calc.png' 
-set xlabel 'z ' 
+set xlabel 'z' 
 set key top left 
 set title 'Error Function'
 set ylabel 'erf(z)' 

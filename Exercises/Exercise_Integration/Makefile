@@ -4,7 +4,7 @@ erf_int_calc.png: Out.txt erf_Out.txt Makefile
 	echo "\
 	set terminal png \n\
 	set output '$@' \n\
-	set xlabel '$ z $ ' \n\
+	set xlabel 'z' \n\
 	set key top left \n\
 	set title 'Error Function'\n\
 	set ylabel 'erf(z)' \n\
