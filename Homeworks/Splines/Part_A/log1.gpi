@@ -1,0 +1,9 @@
+set terminal png 
+set output 'xsq_int.png' 
+set xlabel 'x' 
+set key top left 
+set title 'y = Int(y=$ x^2$)'
+set ylabel 'y' 
+set yrange [0:45] 
+plot 'IntVals.txt' using 1:4 with lines title 'Integral of $ x^2$ squared' 
+
