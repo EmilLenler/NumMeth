@@ -1,0 +1,10 @@
+set terminal png 
+set output 'xsq_plot.png' 
+set xlabel 'x' 
+set key top left 
+set title 'y = $ x^2$'
+set ylabel 'y' 
+set yrange [0:26] 
+plot 'OutB.txt' using 1:4 with lines title 'Interpolation' ,\ 
+'TableVals.txt'using 1:4 with points pointtyp 3 title 'Tabulated Values' 
+

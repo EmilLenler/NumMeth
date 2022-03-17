@@ -2,13 +2,47 @@ using System;
 using static System.Math;
 using System.Linq;
 using static System.Console;
-
+using System.IO;
 public class main{
     public static void Main(){
-        double[] xlist =new double[] {-3,-2,-1,0,1,2,3};
-        double[] ylist =new double[] {-3,-2,-1,0,1,2,3};
-        qspline spline1 = new qspline(xlist,ylist);
-        //for(int i = 0; i<=spline1.c.Length-1;i++)
-        //WriteLine($"{spline1.c[i]} {spline1.b[i]}");
+        double[] xlist =new double[] {1,2,3,4,5};
+        double[] ylist1 =new double[] {1,1,1,1,1};
+        double[] ylist2 = new double[] {1,2,3,4,5};
+        double[] ylist3 = new double[] {1,4,9,16,25};
+        qspline spline1 = new qspline(xlist,ylist1);
+        qspline spline2 = new qspline(xlist,ylist2);
+        qspline spline3 = new qspline(xlist,ylist3);
+        double xnum =1;
+        while(xnum<=5){
+            WriteLine($"{xnum} {spline1.spline(xnum)} {spline2.spline(xnum)} {spline3.spline(xnum)}");
+            xnum+=0.1;
+        }
+        var tablenums = new StreamWriter("TableVals.txt");
+        for(int i=0; i<=xlist.Length-1; i++){
+            tablenums.WriteLine($"{xlist[i]} {ylist1[i]} {ylist2[i]}  {ylist3[i]}");
+        }
+        tablenums.Close();
+        var splineDeriv = new StreamWriter("SplineDeriv.txt");
+        double x2 = 1.0;
+        while(x2<=5){
+            splineDeriv.WriteLine($"{x2} {spline1.derivative(x2)} {spline2.derivative(x2)} {spline3.derivative(x2)}");
+            x2+=0.1;
+        }
+        splineDeriv.Close();
+        //Analytical values for the derivatives of the three functions y = 1, y = x and y = x^2
+        
+        var DeriVals = new StreamWriter("AnaDerivs.txt");
+        for(int i = 0; i<=xlist.Length-1; i++){
+            DeriVals.WriteLine($"{xlist[i]} {0} {1} {2*xlist[i]}");
+        }
+        DeriVals.Close();
+
+        var SplineInt = new StreamWriter("SplineInt.txt");
+        double x3=1.0;
+        while(x3<=5){
+            SplineInt.WriteLine($"{x3} {spline1.integrator(x3)} {spline2.integrator(x3)} {spline3.integrator(x3)}");
+            x3+=0.1;
+        }
+        SplineInt.Close();
     }
 }
