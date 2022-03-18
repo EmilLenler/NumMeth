@@ -77,4 +77,4 @@ qspline.dll : qspline.cs
 	mcs $< -target:library
 
 clean :
-	rm -rf *.exe *.dll
+	rm -rf *.exe *.dll *.png *.gpi *.txt

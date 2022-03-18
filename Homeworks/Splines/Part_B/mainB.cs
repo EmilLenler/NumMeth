@@ -37,12 +37,10 @@ public class main{
         }
         DeriVals.Close();
 
-        var SplineInt = new StreamWriter("SplineInt.txt");
-        double x3=1.0;
-        while(x3<=5){
-            SplineInt.WriteLine($"{x3} {spline1.integrator(x3)} {spline2.integrator(x3)} {spline3.integrator(x3)}");
-            x3+=0.1;
+        //StreamWriter Splineint = new StreamWriter("SplineInt.txt");
+        for(double j = 1.0; j<5.0; j+=0.1){
+            WriteLine($"{j} {spline1.integrator(j)}");
         }
-        SplineInt.Close();
+        //Splineint.Close();
     }
 }

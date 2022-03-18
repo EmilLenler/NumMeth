@@ -124,5 +124,4 @@ public bool approx(vector o){
 		if(!approx(this[i],o[i]))return false;
 	return true;
 	}
-
 }//vector

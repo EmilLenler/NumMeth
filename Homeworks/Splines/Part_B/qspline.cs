@@ -13,22 +13,17 @@ public class qspline{
         double[] dx = new double[n-1];
         b = new double[n-1];
         c = new double[n-1];
-        double[] cup = new double[n-1];
-        double[] cdown = new double[n-1];
-        cup[0]=0.0;
+        c[0]=0.0;
         for(int i = 0; i<x.Length-1; i++){
             dx[i] = x[i+1]-x[i];
             p[i] = (y[i+1]-y[i])/dx[i];
         }
         for(int i = 0; i<n-2; i++){
-            cup[i+1]=1/dx[i+1]*(p[i+1]-p[i]-c[i]*dx[i]);
+            c[i+1]=1/dx[i+1]*(p[i+1]-p[i]-c[i]*dx[i]);
         }
-        cdown[n-2] = 0;
+        c[n-2]/=2;
         for(int i=n-3; i>=0; i--){
-                cdown[i] = 1/dx[i]*(p[i+1]-p[i]-c[i+1]*dx[i+1]);
-        }
-        for(int i = 0; i<n-1; i++){
-                c[i]=(cdown[i]+cup[i])/2;
+                c[i] = 1/dx[i]*(p[i+1]-p[i]-c[i+1]*dx[i+1]);
         }
         for(int i = 0; i<n-1; i++){
             b[i]=p[i]-c[i]*dx[i];
@@ -62,8 +57,7 @@ public class qspline{
             double[] dx =new double[x.Length-1];
             for(int j = 0; j<i;){
                 dx[j] = x[j+1]-x[j];
-                double part_int = dx[j]*y[j]+b[j]*0.5*Pow(dx[j],2)+1.0/3*c[j]*Pow(dx[j],3);
-                sum+=part_int;
+                sum+= dx[j]*y[j]+b[j]*0.5*Pow(dx[j],2)+1.0/3*c[j]*Pow(dx[j],3);
                 }
             return sum+y[i]*(z-x[i])+0.5*b[i]*Pow(z-x[i],2)+1.0/3*c[i]*Pow(z-x[i],3);
     }
