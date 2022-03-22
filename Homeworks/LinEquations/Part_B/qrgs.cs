@@ -34,4 +34,23 @@ public class QRGS{
 		}
 		return c;
 	}
+	public matrix inverse(){
+		WriteLine("Entered Matrix Inversion...");
+		matrix A= Q*R;
+		int n = A.size1;
+		matrix B = new matrix(n,n);
+		for(int j= 0; j<n;j++){
+			//Make unit vector and set j'th entry to zero.
+			double[] units = new double[n];
+			units[j]=1;
+			vector unitvec= new vector(units);
+			WriteLine($"Writing unit vector no. {j}");
+			unitvec.print();
+
+			B[j]=solve(unitvec);
+		}
+		WriteLine("...Exiting Matrix Inversion");
+		return B;
+	}
+
 }
