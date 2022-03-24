@@ -1,0 +1,11 @@
+set terminal png 
+set output 'dataplot.png' 
+set xlabel 'time ' 
+set key top right 
+set title 'Activity'
+set ylabel 'ln(Activity)' 
+set xrange[0:20] 
+set yrange[1:5] 
+plot 'DataOut.txt' using 1:2:3 with yerrorbars title 'Data' ,\ 
+'FitOut.txt' using 1:2 with lines title 'Fitted Curve' 
+

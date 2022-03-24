@@ -1,0 +1,25 @@
+Data =
+         1          2          3          4          6          9         10         13         15 
+      4.76       4.61       4.48       4.28       3.97       3.38       3.23       2.72       2.41 
+         5          5          5          5          5          1          1          1          1 
+A =
+         1       4.76 
+         2       4.61 
+         3       4.48 
+         4       4.28 
+         6       3.97 
+         9       3.38 
+        10       3.23 
+        13       2.72 
+        15       2.41 
+c =      4.96      0.171 
+         1          0 
+         0          1 
+Covariance matrix is:
+     0.356      0.035 
+     0.035      0.005 
+Uncertainty of c(0) is 0.596750459665605 (Index starts at 0)
+Uncertainty of c(1) is 0.0707106781186557 (Index starts at 0)
+Fitted halflife is 4.04451793348687 days
+Uncertainty in half-life is 1.6687568905488 days
+From internet Ra224 half-life is 3.6 days. Is fitted value +/- uncertainty OK? True

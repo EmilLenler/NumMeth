@@ -28,5 +28,23 @@ public static vector fitter(Func<double,double>[] fs, matrix Data){
     vector debug = new vector(0);
     return c;
 }
-
+public static matrix Cov(Func<double,double>[] fs, matrix Data){
+    matrix A = new matrix(Data.size2,Data.size1-1);
+    for(int i=0; i<A.size1; i++){
+        for(int j=0; j<A.size2; j++){
+            A[i,j]=Data[j,i];
+        }
+    }
+    matrix U = new matrix(A.size1,A.size2);
+    for(int i =0; i<A.size1; i++){
+        for(int j=0; j<A.size2; j++){
+            U[i,j] = fs[j](A[i,0]);
+        }
+    }
+    QRGS QR = new QRGS(U);
+    matrix B = (QR.R.transpose()*QR.R);
+    QRGS B_QR = new QRGS(B);
+    matrix sigma = B_QR.inverse();
+    return sigma;
+}
 }
