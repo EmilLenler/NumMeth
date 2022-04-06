@@ -35,13 +35,15 @@ public static matrix Cov(Func<double,double>[] fs, matrix Data){
             A[i,j]=Data[j,i];
         }
     }
+    // Debug LineA.print("A is");
     matrix U = new matrix(A.size1,A.size2);
     for(int i =0; i<A.size1; i++){
         for(int j=0; j<A.size2; j++){
             U[i,j] = fs[j](A[i,0]);
         }
     }
-    QRGS QR = new QRGS(U);
+    //Debug line U.print("U is");
+    QRGS QR = new QRGS(A);
     matrix B = (QR.R.transpose()*QR.R);
     QRGS B_QR = new QRGS(B);
     matrix sigma = B_QR.inverse();

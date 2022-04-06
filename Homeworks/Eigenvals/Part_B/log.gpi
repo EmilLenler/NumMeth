@@ -1,0 +1,10 @@
+set terminal png 
+set output 'wfplot.png' 
+set xlabel 'r' 
+set key top right 
+set title 'Wave Function'
+set ylabel 'Wave function value' 
+plot 'DataOut.txt' using 1:2 with lines title 'Ground state' ,\ 
+'DataOut.txt' using 1:3 with linespoints title 'GS +1' ,\ 
+'DataOut.txt' using 1:4 with lines title 'GS +2' 
+

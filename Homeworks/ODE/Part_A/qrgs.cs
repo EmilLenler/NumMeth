@@ -5,6 +5,7 @@ public class QRGS{
     public matrix Q,R;
     public QRGS(matrix A){
     //Here comes Gram Schmidt
+	int size1=A.size1;
 	int size2=A.size2;
 	Q=A.copy();
 	//WriteLine(1);
@@ -34,7 +35,7 @@ public class QRGS{
 		return c;
 	}
 	public matrix inverse(){
-		//WriteLine("Entered Matrix Inversion...");
+		WriteLine("Entered Matrix Inversion...");
 		matrix A= Q*R;
 		int n = A.size1;
 		matrix B = new matrix(n,n);
@@ -43,12 +44,12 @@ public class QRGS{
 			double[] units = new double[n];
 			units[j]=1;
 			vector unitvec= new vector(units);
-			//WriteLine($"Writing unit vector no. {j}");
+			WriteLine($"Writing unit vector no. {j}");
 			unitvec.print();
 
 			B[j]=solve(unitvec);
 		}
-		//WriteLine("...Exiting Matrix Inversion");
+		WriteLine("...Exiting Matrix Inversion");
 		return B;
 	}
 

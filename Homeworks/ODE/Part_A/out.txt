@@ -1,0 +1,1 @@
+Initial values of [theta, omega]      3.04          0 

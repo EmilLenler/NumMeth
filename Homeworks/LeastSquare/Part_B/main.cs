@@ -82,7 +82,7 @@ public class main{
     double halflife = Log(2)/c[1];
     WriteLine($"Fitted halflife is {halflife} days");
     //By error propagation uncertainty in x = u/v where v has some uncertainty dv then dx should be x*(du/u)
-    double delta_hl = halflife*(Sqrt(Cov[1,1])/c[1]);
+    double delta_hl = (Sqrt(Cov[1,1])/c[1]/c[1]);
     WriteLine($"Uncertainty in half-life is {delta_hl} days");
     double RealHL = 3.6;
     bool Halflife_OK = halflife-delta_hl<=RealHL | halflife+delta_hl>=RealHL;
