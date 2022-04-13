@@ -55,7 +55,7 @@ public class qspline{
             int i = binsearch(x,z);
             double sum = 0;
             double[] dx =new double[x.Length-1];
-            for(int j = 0; j<i; j++){
+            for(int j = 0; j<i;){
                 dx[j] = x[j+1]-x[j];
                 sum+= dx[j]*y[j]+b[j]*0.5*Pow(dx[j],2)+1.0/3*c[j]*Pow(dx[j],3);
                 }

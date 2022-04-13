@@ -1,0 +1,9 @@
+set terminal png 
+set output 'xsq_int.png' 
+set xlabel 'x' 
+set key top left 
+set title 'integral of $ y = x^2$ from $ x = 1$ to $ x = 5$ '
+set ylabel 'y' 
+set yrange [0:40] 
+plot 'SplineInt.txt' using 1:4 with lines title 'Integral of interpolation'  
+

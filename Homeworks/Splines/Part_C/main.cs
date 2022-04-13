@@ -36,13 +36,11 @@ public class main{
             DeriVals.WriteLine($"{xlist[i]} {0} {1} {2*xlist[i]}");
         }
         DeriVals.Close();
-        
-        var Splineint = new StreamWriter("SplineInt.txt");
-        double x3= 1.0;
-        while(x3<=5){
-        Splineint.WriteLine($"{x3} {spline1.integrator(x3)} {spline2.integrator(x3)} {spline3.integrator(x3)}");
-        x3+=0.1;
-        };
-        Splineint.Close();
+
+        //StreamWriter Splineint = new StreamWriter("SplineInt.txt");
+        for(double j = 1.0; j<5.0; j+=0.1){
+            WriteLine($"{j} {spline1.integrator(j)}");
+        }
+        //Splineint.Close();
     }
 }

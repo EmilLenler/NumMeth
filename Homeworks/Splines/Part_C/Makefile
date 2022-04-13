@@ -1,35 +1,4 @@
-xsq_int.png x_int.png 1_plot.png x_plot.png xsq_plot.png 1_deriv.png x_deriv.png xsq_deriv.png 1_int.png : OutB.txt TableVals.txt AnaDerivs.txt Makefile
-	echo "\
-	set terminal png \n\
-	set output 'xsq_int.png' \n\
-	set xlabel 'x' \n\
-	set key top left \n\
-	set title 'integral of $$ y = x^2$$ from $$ x = 1$$ to $$ x = 5$$ '\n\
-	set ylabel 'y' \n\
-	set yrange [0:40] \n\
-	plot 'SplineInt.txt' using 1:4 with lines title 'Integral of interpolation'  \n\
-	"| tee logI3.gpi | pyxplot
-	echo "\
-	set terminal png \n\
-	set output 'x_int.png' \n\
-	set xlabel 'x' \n\
-	set key top left \n\
-	set title 'integral of y = x from x = 1 to x = 5'\n\
-	set ylabel 'y' \n\
-	set yrange [0:10] \n\
-	plot 'SplineInt.txt' using 1:3 with lines title 'Integral of interpolation'  \n\
-	"| tee logI2.gpi | pyxplot
-	echo "\
-	set terminal png \n\
-	set output '1_int.png' \n\
-	set xlabel 'x' \n\
-	set key top left \n\
-	set title 'integral of y = 1 from x = 1 to x = 5'\n\
-	set ylabel 'y' \n\
-	set yrange [0:5] \n\
-	plot 'SplineInt.txt' using 1:2 with lines title 'Integral of interpolation'  \n\
-	"| tee logI1.gpi | pyxplot
-	echo "\
+1_plot.png x_plot.png xsq_plot.png 1_deriv.png x_deriv.png xsq_deriv.png 1_int.png : OutB.txt TableVals.txt AnaDerivs.txt Makefile
 	set terminal png \n\
 	set output '1_deriv.png' \n\
 	set xlabel 'x' \n\
@@ -97,11 +66,11 @@ xsq_int.png x_int.png 1_plot.png x_plot.png xsq_plot.png 1_deriv.png x_deriv.png
 	"| tee logxsq.gpi | pyxplot
 
 
-OutB.txt SplineDeriv.txt TableVals.txt DeriVals.txt SplineInt.txt : mainB.exe
-	mono mainB.exe > OutB.txt
+OutB.txt SplineDeriv.txt TableVals.txt DeriVals.txt SplineInt.txt : main.exe
+	mono main.exe > OutB.txt
 
-mainB.exe : mainB.cs qspline.dll
-	mcs mainB.cs -target:exe -reference:qspline.dll
+main.exe : main.cs qspline.dll
+	mcs main.cs -target:exe -reference:qspline.dll
 
 qspline.dll : qspline.cs
 	mcs $< -target:library

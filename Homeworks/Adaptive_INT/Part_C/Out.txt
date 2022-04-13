@@ -1,0 +1,10 @@
+Functions to be integrated from 0 to 1 and their values:
+INT(1/sqrt(x)) = 2, INT(ln(x)/sqrt(x)) = -4
+First integral gives values 1.99999201046432 and 1.99996150007805 with 16 and 8572 evaluations for transformed and untransformed integrals respectively
+Second integral gives values -3.99987385646141 and -3.99991705899915 with 96 and 8604 evaluations for transformed and untransformed integrals respectively
+Entered integration with finite a and infinite b
+Integral of 1/((1+x)*sqrt(x)) from 0 to Inf is 3.14159265358979. Should be pi. Integration was done in 4 steps.
+Entered integration with infinite a and finite b
+Integral of 1/(1+x^2) from -Inf to 0 is 1.57085783648068. Should be pi/2 = 1.5707963267949. Integration was done in 40 steps. 
+Entered integration with infinite a and infinite b
+Integral of e-x^2 from -Inf to Inf is 1.77257556620827. Should be sqrt(pi) = 1.77245385090552. Integration was done in 112 steps. 

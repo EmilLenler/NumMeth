@@ -1,0 +1,9 @@
+set terminal png 
+set output '1_int.png' 
+set xlabel 'x' 
+set key top left 
+set title 'integral of y = 1 from x = 1 to x = 5'
+set ylabel 'y' 
+set yrange [0:5] 
+plot 'SplineInt.txt' using 1:2 with lines title 'Integral of interpolation'  
+
