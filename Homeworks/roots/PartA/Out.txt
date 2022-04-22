@@ -1,0 +1,17 @@
+Jacobi for f1 = [x^2*y, 5x+sin(y)] at x0 = [1,1] is: 
+         2          1 
+         5       0.54 
+Finding roots with tolerance of 1E-06
+Root of f1 near the point x0 = [1,1] is:   0.000241       3.14 
+f1 evaluated in this point is:   1.82e-07   9.82e-07 
+Jacobi of function f2(x,y,z) = [x,5*z,4*y^2-2*z,z*sin(x)] evaluated at [x,y,z]=[1,1,1] is: 
+         1          0          0 
+         0          0          5 
+         0          8         -2 
+      0.54          0      0.841 
+Finding roots with tolerance of 1E-06
+Root of f2 evaluated in the vicinity [1,1,1] is:   2.16e-07    0.00044   1.72e-07 
+f2 evaluated in this point is:   2.16e-07   8.61e-07    4.3e-07   3.73e-14 
+Finding roots with tolerance of 1E-06
+Rosenbrock function extremum found by searching in vicinity of [5,5]:          1          1 
+Rosenbruck function evaluated in this point is 2.23248299763545E-14 
