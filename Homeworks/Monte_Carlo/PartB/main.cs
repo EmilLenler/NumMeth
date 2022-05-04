@@ -17,7 +17,9 @@ public class main{
         WriteLine($"Integral of 1/pi^3*1/(1-cos(x)*cos(y)*cos(z)) from [0,0,0] to [pi,pi,pi] is {Int2[0]} should be 1.392.. repeating. The estimated error is {Int2[1]}");
         WriteLine("---------------------------------------------------------------------------------------------------------------");
         double[] Int3=MC.quasimc(f,a,b,N);
+        double[] int4 =MC.quasimc(f2,alpha,beta,N);
         WriteLine($"Integral using quasi random numbers of x^2*y^2 from [-1,-1] to [1,1] is {Int3[0]} should be 0.444... repeating. The estimated error is {Int3[1]}");
-    
+        WriteLine($"Integral of 1/pi^3*1/(1-cos(x)*cos(y)*cos(z)) from [0,0,0] to [pi,pi,pi] is {int4[0]} should be 1.392.. repeating. The estimated error is {int4[1]}");
+
     }
 }

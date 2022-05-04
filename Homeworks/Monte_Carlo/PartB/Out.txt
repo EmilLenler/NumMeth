@@ -1,5 +1,6 @@
 Number of points used for integration: 1000000
-Integral of x^2*y^2 from [-1,-1] to [1,1] is 0.446318790971355 should be 0.444... repeating. The estimated error is 0.000667353987665965
-Integral of 1/pi^3*1/(1-cos(x)*cos(y)*cos(z)) from [0,0,0] to [pi,pi,pi] is 1.39204321680497 should be 1.392.. repeating. The estimated error is 0.00815393437481133
+Integral of x^2*y^2 from [-1,-1] to [1,1] is 0.444515691663727 should be 0.444... repeating. The estimated error is 0.000665259918941952
+Integral of 1/pi^3*1/(1-cos(x)*cos(y)*cos(z)) from [0,0,0] to [pi,pi,pi] is 1.40702076320966 should be 1.392.. repeating. The estimated error is 0.0133206373931267
 ---------------------------------------------------------------------------------------------------------------
-Integral using quasi random numbers of x^2*y^2 from [-1,-1] to [1,1] is 0.444445547479611 should be 0.444... repeating. The estimated error is 7.03534705609465E-06
+Integral using quasi random numbers of x^2*y^2 from [-1,-1] to [1,1] is 0.444441845504939 should be 0.444... repeating. The estimated error is 7.33258248208912E-06
+Integral of 1/pi^3*1/(1-cos(x)*cos(y)*cos(z)) from [0,0,0] to [pi,pi,pi] is 1.39064511682198 should be 1.392.. repeating. The estimated error is 0.00471352885047405

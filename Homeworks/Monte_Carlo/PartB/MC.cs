@@ -40,7 +40,7 @@ public class MC{
     double sum = 0,sum2=0;
     vector x = new vector(dim);
     vector xerrcheck = new vector(dim);
-    for(int i =0; i<N; i++){
+    for(int i =1; i<N+1; i++){
         double[] Halton = haltonseq(i,dim);
         double[] HaltonErrcheck =haltonseq(i,dim,6); //Set an offset for the choice of base in the halton sequenece.
         for(int k=0; k<dim;k++){
