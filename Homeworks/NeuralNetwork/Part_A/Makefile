@@ -20,3 +20,6 @@ main.exe : main.cs math.dll
 
 math.dll : minimization.cs network.cs vector.cs matrix.cs
 	mcs minimization.cs network.cs vector.cs matrix.cs -target:library -out:math.dll
+
+clean : 
+	rm -rf *.dll *.exe *.gpi *.txt *.png
