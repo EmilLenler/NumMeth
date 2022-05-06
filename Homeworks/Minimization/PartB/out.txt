@@ -1,0 +1,2 @@
+Found minimum of deviation after 36185 steps at point: (m,Gamma,A) =        124       29.6   -0.00475 
+The value of the deviation function in this point is 2.37647873037139E-09

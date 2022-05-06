@@ -9,4 +9,4 @@ math.dll : minimization.cs vector.cs matrix.cs
 	mcs minimization.cs vector.cs matrix.cs -target:library -out:math.dll
 
 clean : 
-	rm -rf *.dll *.txt *.exe
+	rm -rf *.dll out.txt *.exe
