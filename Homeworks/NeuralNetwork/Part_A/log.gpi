@@ -1,0 +1,10 @@
+set terminal png 
+set output 'plot.png' 
+set xlabel '$ x$' 
+set ylabel '$ f(x)$' 
+set xrange [-1:1] 
+set title ' $ f(x) = cos(5x-1)*e^{(-x^2)}$ ' 
+set key top left 
+plot 'output.txt' using 1:2 with color colors.red lines title 'Analytic values' ,\ 
+'Interpolated_DATA.txt' with color colors.green lines title 'Network values' 
+

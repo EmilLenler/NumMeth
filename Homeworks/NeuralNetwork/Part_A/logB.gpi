@@ -1,0 +1,11 @@
+set terminal png 
+set output 'plot.png' 
+set xlabel '$ x$' 
+set ylabel '$ f(x)$' 
+set xrange [-1:1] 
+set title '$ f(x) = cos(5x-1)*e^(-x^2)$ ' 
+set key bottom right 
+plot 'output.txt' using 1:2 with color colors.red lines  title 'Gamma Fct' ,\ 
+'tablevals.txt' with pointtype 3 title 'Tabulated Values' ,\ 
+0 notitle with color colors.black 
+
