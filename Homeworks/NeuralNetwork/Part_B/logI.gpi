@@ -1,0 +1,9 @@
+set terminal png 
+set output 'plotInt.png' 
+set xlabel '$ x$' 
+set ylabel '$ \int f(x) dx$' 
+set xrange [-1:1] 
+set title 'Plot of integral' 
+set key top left 
+plot 'Interpolated_DATA.txt' using 1:5 with color colors.green lines title 'Network Integral' 
+
