@@ -6,6 +6,5 @@ set xrange [0.1:5]
 set yrange [-1:5] 
 set title 'log of gamma Function' 
 set key top left 
-plot 'gamma.txt' using 1:3 with color colors.red lines  title 'log of gamma function' ,\ 
-0 notitle with color colors.black 
+plot 'gamma.txt' using 1:3 with color colors.red lines  title 'log of gamma function' 
 

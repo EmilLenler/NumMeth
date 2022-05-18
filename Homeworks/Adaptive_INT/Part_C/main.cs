@@ -48,6 +48,6 @@ public class main{
             return Exp(-x*x);
         };
         double intABinf = integrator.integrate(fAB,Double.NegativeInfinity,Double.PositiveInfinity);
-        WriteLine($"Integral of e-x^2 from -Inf to Inf is {intABinf}. Should be sqrt(pi) = {Sqrt(PI)}. Integration was done in {p} steps. ");
+        WriteLine($"Integral of e^(-x^2) from -Inf to Inf is {intABinf}. Should be sqrt(pi) = {Sqrt(PI)}. Integration was done in {p} steps. ");
     }    
 }

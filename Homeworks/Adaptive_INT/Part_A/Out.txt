@@ -1,0 +1,3 @@
+Functions to be integrated from 0 to 1 and their values:
+INT(sqrt(x)) = 2/3, INT(1/sqrt(x)) = 2, INT(4*sqrt(1-x^2)) = pi,  INT(ln(x)/sqrt(x)) = -4
+Calculated values 0.666953909054655 1.99996150007805 3.14183457802727 -3.99991705899915

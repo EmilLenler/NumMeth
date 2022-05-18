@@ -27,6 +27,4 @@ matlib.dll : integrate.cs
 	mcs -target:library -out:./matlib.dll integrate.cs
 
 clean : 
-	rm matlib.dll main.exe Out.txt
-
-#This is a git workaro
+	rm matlib.dll main.exe Out.txt *.png *.exe *.gpi 

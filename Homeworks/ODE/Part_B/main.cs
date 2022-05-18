@@ -33,14 +33,14 @@ public class main{
         }
         Writer1.Close();
         var Writer2 = new StreamWriter("OutputFile2.txt");
-        vector ya2 = new vector(0,-1);
+        vector ya2 = new vector(0,1);
         for(int i = 0; i<=100; i++){
             double t = i*2*PI/100;
             vector sol = RK12.driver(harmonic,a,ya2,t);
             Writer2.WriteLine($"{t} {sol[0]} {sol[1]}");
         }
         Writer2.Close();
-        ya2.print("Initial values of u'' = -u are set to [u,du/dt] (0,-1) should produce cosine.");
+        ya2.print("Initial values of u'' = -u are set to [u,du/dt] (0,1) should produce cosine.");
         //vector sol = RK12.driver(f,a,ya,b);
     }
 }

@@ -1,5 +1,6 @@
 output.txt : main.exe
 	mono main.exe > out.txt
+	cat out.txt
 
 main.exe : main.cs
 	mcs main.cs

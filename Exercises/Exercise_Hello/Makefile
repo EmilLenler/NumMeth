@@ -1,1 +1,8 @@
-This is a test file to see if everything works.
+out.txt : hello.exe
+	mono hello.exe>out.txt
+	cat out.txt
+
+hello.exe : hello.cs
+	mcs hello.cs
+clean : 
+	rm -rf *.txt *.exe

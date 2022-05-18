@@ -7,3 +7,6 @@ main.exe : main.cs math.dll
 
 math.dll : MC.cs vector.cs
 	mcs MC.cs vector.cs -target:library -out:math.dll
+
+clean : 
+	rm -rf *.txt *.dll *.exe

@@ -1,0 +1,9 @@
+set terminal png 
+set output 'plot.png' 
+set xlabel '$ z$' 
+set key bottom right 
+set title 'Error Function'
+set ylabel '$ erf(z)$' 
+plot 'erfout.txt' using 1:2 with lines title 'Numerical integration' ,\ 
+'erftable.txt' using 1:2 with points title 'Tabulated Values' 
+

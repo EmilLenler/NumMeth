@@ -6,5 +6,5 @@ set title 'y = 1'
 set ylabel 'y' 
 set yrange [0:2] 
 plot 'OutB.txt' using 1:2 with lines title 'Interpolation' ,\ 
-'TableVals.txt'using 1:2 with points pointtyp 3 title 'Tabulated Values' 
+'TableVals.txt'using 1:2 with points pointtyp 3 title 'Analyitc Values' 
 

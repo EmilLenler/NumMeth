@@ -9,7 +9,7 @@
 	set ylabel 'y' \n\
 	set yrange [0:2] \n\
 	plot '$<' using 1:2 with lines title 'Interpolation' ,\ \n\
-	'TableVals.txt' using 1:2 with points pointtyp 3 title 'Tabulated Values' \n\
+	'TableVals.txt' using 1:2 with points pointtyp 3 title 'Analytic Values' \n\
 	"| tee log1.gpi | pyxplot
 	echo "\
 	set terminal png \n\
@@ -20,7 +20,7 @@
 	set ylabel 'y' \n\
 	set yrange [0:6] \n\
 	plot '$<' using 1:3 with lines title 'Interpolation' ,\ \n\
-	'TableVals.txt' using 1:3 with points pointtyp 3 title 'Tabulated Values' \n\
+	'TableVals.txt' using 1:3 with points pointtyp 3 title 'Analytic Values' \n\
 	"| tee logx.gpi | pyxplot
 	echo "\
 	set terminal png \n\
@@ -31,7 +31,7 @@
 	set ylabel 'y' \n\
 	set yrange [0:30] \n\
 	plot '$<' using 1:4 with lines title 'Interpolation' ,\ \n\
-	'TableVals.txt' using 1:4 with points pointtyp 3 title 'Tabulated Values' \n\
+	'TableVals.txt' using 1:4 with points pointtyp 3 title 'Analytic Values' \n\
 	"| tee log1.gpi | pyxplot
 	echo "\
 	set terminal png \n\
@@ -61,7 +61,7 @@
 	set title 'y = Int(y=$$ x^2$$)'\n\
 	set ylabel 'y' \n\
 	set yrange [0:45] \n\
-	plot 'IntVals.txt' using 1:4 with lines title 'Integral of $$ x^2$$ squared' \n\
+	plot 'IntVals.txt' using 1:4 with lines title 'Integral of $$ x^2$$' \n\
 	"| tee log1.gpi | pyxplot
 
 OutA.txt TableVals.txt IntVals.txt : mainA.exe

@@ -14,7 +14,7 @@ public class main{
         vector alpha = new vector(0,0,0);
         vector beta = new vector(PI,PI,PI);
         double[] Int2 = MC.plainmc(f2,alpha,beta,N);
-        WriteLine($"Integral of 1/pi^3*1/(1-cos(x)*cos(y)*cos(z)) from [0,0,0] to [pi,pi,pi] is {Int2[0]} should be 1.392.. repeating. The estimated error is {Int2[1]}");
+        WriteLine($"Integral of 1/pi^3*1/(1-cos(x)*cos(y)*cos(z)) from [0,0,0] to [pi,pi,pi] is {Int2[0]} should be 1.392..  The estimated error is {Int2[1]}");
     
     
     }

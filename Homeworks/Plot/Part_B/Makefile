@@ -34,8 +34,7 @@ gamma.pyxplot.png lngamma.pyxplot.png : gamma.txt tablevals.txt Makefile
 	set yrange [-1:5] \n\
 	set title 'log of gamma Function' \n\
 	set key top left \n\
-	plot '$<' using 1:3 with color colors.red lines  title 'log of gamma function' ,\ \n\
-	0 notitle with color colors.black \n\
+	plot '$<' using 1:3 with color colors.red lines  title 'log of gamma function' \n\
 	" |tee logBln.gpi |pyxplot
 
 gamma.txt : mainB.exe

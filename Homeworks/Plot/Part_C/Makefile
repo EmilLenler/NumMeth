@@ -17,8 +17,11 @@ gammacomp.pyxplot.png : gammacomp.txt Makefile
 gammacomp.txt : mainC.exe
 	mono mainC.exe >gammacomp.txt
 
-mainC.exe : mainC.cs
+mainC.exe : mainC.cs cmath.dll
 	mcs -reference:cmath.dll mainC.cs
 
 cmath.dll : cmath.cs complex.cs
 	mcs -target:library -out:./cmath.dll $^
+
+clean : 
+	rm -rf *.dll *.png *.exe *.eps *.gpi *.txt

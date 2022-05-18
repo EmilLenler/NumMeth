@@ -1,24 +1,24 @@
 using System;
 using static System.Console;
 using static System.Math;
+using System.Collections.Generic;
 class main{
-
-    public static double DiffEq(double x){
-        Func<double,vector,vector> F = delegate(double t, vector y){
-        double dydt0 = y[1];
-        double dydt1 = -0.25*y[1]-5.0*Sin(y[0]);
-        return new vector(dydt0,dydt1);
+    public static void Main(){
+        double b = 0.25;
+        double c = 5.0;
+        Func <double,vector,vector> oscillator = delegate(double t, vector y){
+            double theta = y[0], omega = y[1];
+            return new vector(omega, -b*omega-c*Sin(theta));
         };
-
-        double a=0;
-        double b=x;
-        vector ya = new vector(0,PI-0.1);
+        double start_t = 0;
+        double end_t = 10;
+        vector y_start = new vector(PI-0.1,0.1);
         var xlist = new List<double>();
         var ylist = new List<vector>();
-        vector result = ode.ivp(F,a,ya,b,xlist,ylist);
-        return result;
+        vector ystop = ode.ivp(oscillator,start_t,y_start,end_t,xlist,ylist);
+        for(int i = 0; i<xlist.Count; i++){
+            WriteLine($"{xlist[i]} {ylist[i][0]} {ylist[i][1]}");
         }
-public static void Main(){
-    WriteLine($"{PI/2} {DiffEq(PI/2)}");
-}
+
+    }
 }

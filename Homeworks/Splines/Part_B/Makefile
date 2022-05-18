@@ -71,7 +71,7 @@ xsq_int.png x_int.png 1_plot.png x_plot.png xsq_plot.png 1_deriv.png x_deriv.png
 	set ylabel 'y' \n\
 	set yrange [0:2] \n\
 	plot '$<' using 1:2 with lines title 'Interpolation' ,\ \n\
-	'TableVals.txt'using 1:2 with points pointtyp 3 title 'Tabulated Values' \n\
+	'TableVals.txt'using 1:2 with points pointtyp 3 title 'Analyitc Values' \n\
 	"| tee log1.gpi | pyxplot
 	echo "\
 	set terminal png \n\
@@ -82,7 +82,7 @@ xsq_int.png x_int.png 1_plot.png x_plot.png xsq_plot.png 1_deriv.png x_deriv.png
 	set ylabel 'y' \n\
 	set yrange [0:6] \n\
 	plot '$<' using 1:3 with lines title 'Interpolation' ,\  \n\
-	'TableVals.txt'using 1:3 with points pointtyp 3 title 'Tabulated Values' \n\
+	'TableVals.txt'using 1:3 with points pointtyp 3 title 'Analytic Values' \n\
 	"| tee logx.gpi | pyxplot
 	echo "\
 	set terminal png \n\
@@ -93,7 +93,7 @@ xsq_int.png x_int.png 1_plot.png x_plot.png xsq_plot.png 1_deriv.png x_deriv.png
 	set ylabel 'y' \n\
 	set yrange [0:26] \n\
 	plot '$<' using 1:4 with lines title 'Interpolation' ,\ \n\
-	'TableVals.txt'using 1:4 with points pointtyp 3 title 'Tabulated Values' \n\
+	'TableVals.txt'using 1:4 with points pointtyp 3 title 'Analytic Values' \n\
 	"| tee logxsq.gpi | pyxplot
 
 

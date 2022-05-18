@@ -7,4 +7,4 @@ Integral of 1/((1+x)*sqrt(x)) from 0 to Inf is 3.14159265358979. Should be pi. I
 Entered integration with infinite a and finite b
 Integral of 1/(1+x^2) from -Inf to 0 is 1.57085783648068. Should be pi/2 = 1.5707963267949. Integration was done in 40 steps. 
 Entered integration with infinite a and infinite b
-Integral of e-x^2 from -Inf to Inf is 1.77257556620827. Should be sqrt(pi) = 1.77245385090552. Integration was done in 112 steps. 
+Integral of e^(-x^2) from -Inf to Inf is 1.77257556620827. Should be sqrt(pi) = 1.77245385090552. Integration was done in 112 steps. 

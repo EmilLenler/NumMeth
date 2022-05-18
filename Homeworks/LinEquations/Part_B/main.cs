@@ -12,10 +12,10 @@ public class main{
                 A[j,i] = rnd.Next(1,11); //Make random matrix with values in range [1,10].
             }
         }
-
+        A.print($"A is :");
         QRGS QR = new QRGS(A);
         matrix B = QR.inverse();
-        B.print("B is:");
+        B.print("inverse of A is:");
         matrix I_check1 = B*A;
         matrix I_check2 = A*B;
         matrix Identity = matrix.id(6);

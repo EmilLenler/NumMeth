@@ -44,8 +44,6 @@ public class QRGS{
 			double[] units = new double[n];
 			units[j]=1;
 			vector unitvec= new vector(units);
-			WriteLine($"Writing unit vector no. {j}");
-			unitvec.print();
 
 			B[j]=solve(unitvec);
 		}

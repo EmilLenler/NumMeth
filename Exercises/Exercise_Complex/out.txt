@@ -1,7 +1,7 @@
-Sqrt(-1) = 	NaN+0i
-Sqrt(i) = 0.707+0.707i
-e^i = 0.54+0.841i
-e^(i*pi) = -1+1.22e-16i
-i^i = 0.208+0i
-ln(i) = 0+1.57i
-sin(i*pi) = 0+11.5i
+Sqrt(-1) = 	NaN+0i should be 1i
+Sqrt(i) = 0.707+0.707i should be 0.707+0.707i
+e^i = 0.54+0.841i should be 0.54 +0.84i
+e^(i*pi) = -1+1.22e-16i should be -1
+i^i = 0.208+0i should be 0.208
+ln(i) = 0+1.57i should be 1.57i
+sin(i*pi) = 0+11.5i should be 11.5i

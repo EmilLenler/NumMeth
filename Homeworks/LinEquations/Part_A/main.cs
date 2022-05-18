@@ -43,6 +43,7 @@ public class main{
     WriteLine($"{c1.approx(A_1)}");
     WriteLine("Square matrix solution testing over");
     WriteLine("Testing non square matrix now:");
+    A_2.print($"Tall matrix is:");
     QRGS Non_Square= new QRGS(A_2);
     Non_Square.R.print("Is R upper triangular?");
     Non_Square.Q.print("Q=");
