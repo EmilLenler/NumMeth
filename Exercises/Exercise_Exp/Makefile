@@ -1,3 +1,9 @@
+all : main.pdf
+
+main.pdf : main.tex plot.png
+	pdflatex $<
+	pdflatex $<
+
 plot.png : out.txt Makefile
 	echo "\
 	set terminal png \n\
