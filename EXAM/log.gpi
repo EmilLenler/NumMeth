@@ -1,0 +1,8 @@
+set terminal png 
+set output 'timeplot.png' 
+set xlabel 'Matrix size' 
+set key top left 
+set title 'Error Function'
+set ylabel 'Time spent / ms' 
+plot 'TimeData.txt' using 2:1 with points title 'Computation Time for SVD' 
+
