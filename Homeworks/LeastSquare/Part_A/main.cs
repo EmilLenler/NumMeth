@@ -61,7 +61,7 @@ public class main{
     }
     Data.print("Data =");
     vector c = fit.fitter(fs,Data);
-    c.print("c =");
+    c.print("Offset , Decay Parameter =");
 
     var DatOut = new StreamWriter("DataOut.txt");
     for(int j=0; j<nos.Length; j++){

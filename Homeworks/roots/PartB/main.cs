@@ -6,7 +6,7 @@ public static class main{
         double rmax = 8;
         Func<vector,vector> dfdtdt = delegate(vector v){
             double e = v[0];
-            double frmax = hydrogen.Fe(e,rmax);
+            double frmax = hydrogen_solver.vals(e,rmax);
             return new vector(frmax);
         };
         vector start = new vector(-1.0);
@@ -15,7 +15,7 @@ public static class main{
         WriteLine($"# Energy is {energy}");
         WriteLine($"# r, ODE solution, Real Solution, ODE/Real");
         for(double r = 0; r<=rmax; r+=rmax/64){
-            WriteLine($"{r} {hydrogen.Fe(energy,r)} {r*Exp(-r)} {hydrogen.Fe(energy,r)/(r*Exp(-r))}");
+            WriteLine($"{r} {hydrogen_solver.vals(energy,r)} {r*Exp(-r)} {hydrogen_solver.vals(energy,r)/(r*Exp(-r))}");
         }
     }
 }

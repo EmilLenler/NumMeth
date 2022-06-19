@@ -1,2 +1,2 @@
 Initial values oscilattor are [theta, omega]      3.04          0 
-Initial values of u'' = -u are set to [u,du/dt] (0,-1) should produce cosine.         0         -1 
+Initial values of u'' = -u are set to [u,du/dt] (0,1) should produce cosine.         0          1 

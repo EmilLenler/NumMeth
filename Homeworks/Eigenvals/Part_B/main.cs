@@ -74,6 +74,7 @@ public class main{
         vector Ground = VecMatFin[0];
         vector GSp1 = VecMatFin[1];
         vector GSp2 = VecMatFin[2];
+        DataOut.WriteLine($"0 0 0 0 ");
         for(int i=0; i<rfin.size; i++)
         DataOut.WriteLine($"{rfin[i]} {Ground[i]} {GSp1[i]} {GSp2[i]}");
         DataOut.Close();
